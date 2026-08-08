@@ -1,5 +1,5 @@
 // =====================================
-// PORTFOLIO SCRIPT
+// PORTFOLIO - CRIMSON SCRIPT
 // =====================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, { duration: 500, fill: 'forwards' });
         });
 
-        // Hover effect on interactive elements
-        const interactives = document.querySelectorAll('a, button, .work-card, .skill-item, .info-card');
+        const interactives = document.querySelectorAll('a, button, .work-card, .skill-item, .gallery-item, .contact-item');
         interactives.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorOutline.style.width = '56px';
@@ -201,8 +200,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===============================
+    // GALLERY LIGHTBOX (simple)
+    // ===============================
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            if (img) {
+                // Create lightbox
+                const lb = document.createElement('div');
+                lb.style.cssText = `
+                    position: fixed; inset: 0; z-index: 10000;
+                    background: rgba(15,10,10,0.95); backdrop-filter: blur(20px);
+                    display: flex; align-items: center; justify-content: center;
+                    cursor: zoom-out; opacity: 0; transition: opacity 0.3s;
+                `;
+                const lbImg = document.createElement('img');
+                lbImg.src = img.src;
+                lbImg.style.cssText = `
+                    max-width: 90%; max-height: 85vh; border-radius: 16px;
+                    border: 1px solid rgba(239,68,68,0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+                    transform: scale(0.9); transition: transform 0.4s var(--ease-smooth);
+                `;
+                lb.appendChild(lbImg);
+                document.body.appendChild(lb);
+                document.body.style.overflow = 'hidden';
+
+                requestAnimationFrame(() => {
+                    lb.style.opacity = '1';
+                    lbImg.style.transform = 'scale(1)';
+                });
+
+                lb.addEventListener('click', () => {
+                    lb.style.opacity = '0';
+                    lbImg.style.transform = 'scale(0.9)';
+                    setTimeout(() => { lb.remove(); document.body.style.overflow = ''; }, 300);
+                });
+            }
+        });
+    });
+
+    // ===============================
     // CONSOLE
     // ===============================
-    console.log('%c🌿 Portfolio Loaded', 'font-size: 18px; color: #10b981; font-weight: bold; font-family: monospace;');
+    console.log('%c🔴 Portfolio Loaded', 'font-size: 18px; color: #ef4444; font-weight: bold; font-family: monospace;');
+    console.log('%cCrafted by Rann', 'font-size: 13px; color: #a89090; font-family: monospace;');
 });
 
