@@ -6,27 +6,43 @@
   <title>Rann | Creative Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">RN<span>.</span></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
   <!-- Custom Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <a href="#" class="nav-logo">RN.</a>
+    <a href="#" class="nav-logo" data-cursor="hover">RN<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#works" class="nav-link">Works</a></li>
-      <li><a href="#gallery" class="nav-link">Gallery</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#home" class="nav-link active" data-cursor="hover">Home</a></li>
+      <li><a href="#about" class="nav-link" data-cursor="hover">About</a></li>
+      <li><a href="#works" class="nav-link" data-cursor="hover">Works</a></li>
+      <li><a href="#gallery" class="nav-link" data-cursor="hover">Gallery</a></li>
+      <li><a href="#contact" class="nav-link" data-cursor="hover">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Let's Talk</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <a href="#contact" class="nav-cta" data-cursor="hover">
+      <span>Let's Talk</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" data-cursor="hover">
+      <span></span>
       <span></span>
       <span></span>
     </button>
@@ -34,52 +50,77 @@
 
   <!-- Mobile Nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="#home" class="mob-link">Home</a>
-    <a href="#about" class="mob-link">About</a>
-    <a href="#works" class="mob-link">Works</a>
-    <a href="#gallery" class="mob-link">Gallery</a>
-    <a href="#contact" class="mob-link">Contact</a>
+    <a href="#home" class="mob-link" data-cursor="hover">Home</a>
+    <a href="#about" class="mob-link" data-cursor="hover">About</a>
+    <a href="#works" class="mob-link" data-cursor="hover">Works</a>
+    <a href="#gallery" class="mob-link" data-cursor="hover">Gallery</a>
+    <a href="#contact" class="mob-link" data-cursor="hover">Contact</a>
   </div>
 
   <!-- Hero -->
   <section class="hero" id="home">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="hero-bg">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
       <div class="orb orb-3"></div>
     </div>
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">
-        <span class="name-line gradient-text">Rann</span>
-      </h1>
-      <p class="hero-desc">
-        I craft digital experiences that blend creativity with technical excellence.
-        Specializing in modern web development, UI/UX design, and Web3 applications.
-      </p>
-      <div class="hero-actions">
-        <a href="#works" class="btn-main">View My Work</a>
-        <a href="#contact" class="btn-ghost">Get In Touch</a>
-      </div>
-      <div class="hero-socials">
-        <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-        <a href="#" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-        <a href="#" aria-label="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge" data-reveal="up">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Available for work</span>
+          </div>
+          <p class="hero-greeting" data-reveal="up">Hello, I'm</p>
+          <h1 class="hero-name" data-reveal="up">
+            <span class="name-line gradient-text" id="typewriter">Rann</span>
+          </h1>
+          <p class="hero-desc" data-reveal="up">
+            I craft digital experiences that blend creativity with technical excellence.
+            Specializing in modern web development, UI/UX design, and Web3 applications.
+          </p>
+          <div class="hero-actions" data-reveal="up">
+            <a href="#works" class="btn-main magnetic" data-cursor="hover">
+              <span>View My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-ghost magnetic" data-cursor="hover">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+          <div class="hero-socials" data-reveal="up">
+            <a href="#" class="social-btn magnetic" aria-label="Twitter" data-cursor="hover">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-btn magnetic" aria-label="GitHub" data-cursor="hover">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="#" class="social-btn magnetic" aria-label="Discord" data-cursor="hover">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" data-reveal="scale">
+          <div class="profile-ring">
+            <div class="ring-spin"></div>
+            <div class="ring-spin ring-spin-2"></div>
+            <div class="profile-glow"></div>
+            <div class="profile-inner">
+              <img src="assets/pfp.jpg" alt="Rann Profile" class="profile-img" onerror="this.style.display='none'">
+            </div>
+            <div class="floating-tag tag-1">Web3</div>
+            <div class="floating-tag tag-2">React</div>
+            <div class="floating-tag tag-3">UI/UX</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="profile-ring">
-        <div class="ring-spin"></div>
-        <div class="ring-spin ring-spin-2"></div>
-        <div class="profile-inner">
-          <!-- PFP: Pastikan file assets/pfp.jpg adalah gambar asli (bukan HTML) -->
-          <!-- Cara fix: python3 make_pfp.py ATAU wget URL_GAMBAR_ASLI -O assets/pfp.jpg -->
-          <img src="assets/pfp.jpg" alt="Rann Profile" class="profile-img" onerror="this.style.display='none'">
-        </div>
-        <div class="floating-tag tag-1">Web3</div>
-        <div class="floating-tag tag-2">React</div>
-        <div class="floating-tag tag-3">UI/UX</div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
       </div>
+      <span>Scroll</span>
     </div>
   </section>
 
@@ -87,41 +128,40 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="section-tag">About Me</span>
-          <h2>Building the future,<br>one pixel at a time</h2>
-          <p>
+        <div class="about-text">
+          <span class="section-tag" data-reveal="up">About Me</span>
+          <h2 data-reveal="up">Building the future,<br><span class="gradient-text">one pixel at a time</span></h2>
+          <p data-reveal="up">
             I'm a passionate developer and designer based in the digital realm. With expertise in
             modern frontend technologies and a keen eye for design, I create web experiences that
             are both beautiful and functional.
           </p>
-          <p>
-            <!-- ===== BIO UPDATE: Moderator at Society ===== -->
+          <p data-reveal="up">
             Currently focused on Web3 development, building communities, and serving as a
             <strong>moderator at Society</strong> — a thriving Web3 community platform. I craft
             interfaces that push the boundaries of what's possible on the web while fostering
             meaningful connections in the space.
           </p>
-          <div class="about-stats">
+          <div class="about-stats" data-reveal="up">
             <div class="a-stat">
-              <span class="a-num">3+</span>
+              <span class="a-num" data-count="3">0</span><span class="a-suffix">+</span>
               <span class="a-label">Years Experience</span>
             </div>
             <div class="a-stat">
-              <span class="a-num">20+</span>
+              <span class="a-num" data-count="20">0</span><span class="a-suffix">+</span>
               <span class="a-label">Projects Done</span>
             </div>
             <div class="a-stat">
-              <span class="a-num">100%</span>
+              <span class="a-num" data-count="100">0</span><span class="a-suffix">%</span>
               <span class="a-label">Commitment</span>
             </div>
           </div>
         </div>
-        <div class="about-photo reveal">
-          <div class="photo-frame">
+        <div class="about-photo" data-reveal="scale">
+          <div class="photo-frame tilt-card">
             <div class="photo-glow"></div>
-            <!-- About photo: bisa pakai foto yang sama atau foto berbeda -->
             <img src="assets/pfp.jpg" alt="About Rann" onerror="this.style.display='none'">
+            <div class="photo-shine"></div>
           </div>
         </div>
       </div>
@@ -131,21 +171,25 @@
   <!-- Works -->
   <section class="works" id="works">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Selected Works</span>
-        <h2>Projects I've Built</h2>
+      <div class="section-header">
+        <span class="section-tag" data-reveal="up">Selected Works</span>
+        <h2 data-reveal="up">Projects I've Built</h2>
+        <p class="section-desc" data-reveal="up">Featured work and collaborations</p>
       </div>
       <div class="works-grid works-single">
-        <div class="work-card reveal">
+        <div class="work-card tilt-card" data-reveal="up" data-cursor="hover">
           <div class="work-preview">
             <img src="https://i.ibb.co.com/5g1BjQkw/22213-5.jpg" alt="Society" class="work-logo">
+            <div class="work-shine"></div>
             <div class="work-overlay">
-              <a href="#" class="work-link" aria-label="View Project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              <a href="#" class="work-link" aria-label="View Project" data-cursor="hover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
             </div>
           </div>
           <div class="work-info">
             <h3>Society</h3>
-            <p>Web3 community platform with modern UI, animations, and Discord integration.</p>
+            <p>Web3 community platform where I serve as a moderator and build custom Discord bots to enhance community engagement, automation, and user experience.</p>
             <div class="work-tags">
               <span>HTML</span>
               <span>CSS</span>
@@ -160,19 +204,20 @@
   <!-- Gallery -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Gallery</span>
-        <h2>Moments & Memories</h2>
+      <div class="section-header">
+        <span class="section-tag" data-reveal="up">Gallery</span>
+        <h2 data-reveal="up">Moments & Memories</h2>
+        <p class="section-desc" data-reveal="up">Snapshots from the journey</p>
       </div>
       <div class="gallery-grid">
-        <!-- ===== GALLERY: 2 Memories ===== -->
-
-        <div class="gallery-item reveal">
+        <div class="gallery-item tilt-card" data-reveal="up" data-cursor="hover">
           <img src="https://i.ibb.co.com/B8wC9Jj/memory1.jpg" alt="Memory 1" loading="lazy">
+          <div class="gallery-shine"></div>
           <div class="gallery-overlay"><span>Memory 1</span></div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item tilt-card" data-reveal="up" data-cursor="hover">
           <img src="https://i.ibb.co.com/8nhvNTM3/memory2.jpg" alt="Memory 2" loading="lazy">
+          <div class="gallery-shine"></div>
           <div class="gallery-overlay"><span>Memory 2</span></div>
         </div>
       </div>
@@ -182,33 +227,52 @@
   <!-- Skills -->
   <section class="skills" id="skills">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">My Arsenal</span>
-        <h2>Tools & Technologies</h2>
+      <div class="section-header">
+        <span class="section-tag" data-reveal="up">My Arsenal</span>
+        <h2 data-reveal="up">Tools & Technologies</h2>
+        <p class="section-desc" data-reveal="up">Tech stack I work with daily</p>
       </div>
       <div class="skills-grid">
-        <div class="skill-item reveal">
-          <div class="skill-icon si-html">HTML5</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-html">HTML5</div>
+            <span class="skill-percent">95%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
         </div>
-        <div class="skill-item reveal">
-          <div class="skill-icon si-css">CSS3</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-css">CSS3</div>
+            <span class="skill-percent">92%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
         </div>
-        <div class="skill-item reveal">
-          <div class="skill-icon si-js">JavaScript</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-js">JavaScript</div>
+            <span class="skill-percent">88%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
         </div>
-        <div class="skill-item reveal">
-          <div class="skill-icon si-react">React</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-react">React</div>
+            <span class="skill-percent">85%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
         </div>
-        <div class="skill-item reveal">
-          <div class="skill-icon si-web3">Web3</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-web3">Web3</div>
+            <span class="skill-percent">80%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
         </div>
-        <div class="skill-item reveal">
-          <div class="skill-icon si-ui">UI/UX</div>
+        <div class="skill-item" data-reveal="up" data-cursor="hover">
+          <div class="skill-top">
+            <div class="skill-icon si-ui">UI/UX</div>
+            <span class="skill-percent">90%</span>
+          </div>
           <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
         </div>
       </div>
@@ -218,22 +282,23 @@
   <!-- Contact -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="contact-box reveal">
+      <div class="contact-box" data-reveal="scale">
+        <div class="contact-glow"></div>
         <span class="section-tag">Get In Touch</span>
-        <h2>Let's Work Together</h2>
+        <h2>Let's Work <span class="gradient-text">Together</span></h2>
         <p>Have a project in mind? Let's create something amazing.</p>
         <div class="contact-links">
-          <a href="mailto:hello@rann.xyz" class="contact-item">
+          <a href="mailto:hello@rann.xyz" class="contact-item magnetic" data-cursor="hover">
             <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-            Email
+            <span>Email</span>
           </a>
-          <a href="#" class="contact-item">
+          <a href="#" class="contact-item magnetic" data-cursor="hover">
             <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></span>
-            Twitter
+            <span>Twitter</span>
           </a>
-          <a href="#" class="contact-item">
+          <a href="#" class="contact-item magnetic" data-cursor="hover">
             <span class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
-            GitHub
+            <span>GitHub</span>
           </a>
         </div>
       </div>
@@ -245,19 +310,19 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="f-logo">RN.</span>
+          <span class="f-logo">RN<span>.</span></span>
           <p>Crafting digital experiences with passion.</p>
         </div>
         <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#works">Works</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" data-cursor="hover">Home</a>
+          <a href="#about" data-cursor="hover">About</a>
+          <a href="#works" data-cursor="hover">Works</a>
+          <a href="#gallery" data-cursor="hover">Gallery</a>
+          <a href="#contact" data-cursor="hover">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Rann. All rights reserved.</p>
+        <p>&copy; 2026 Rann. All rights reserved. Crafted with <span class="heart">❤</span></p>
       </div>
     </div>
   </footer>
