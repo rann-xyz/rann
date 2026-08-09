@@ -639,6 +639,23 @@ body:hover .cursor-outline { opacity: 0.4; }
  gap: 24px;
 }
 
+.works-single {
+ grid-template-columns: 1fr;
+ max-width: 480px;
+ margin: 0 auto;
+}
+
+.work-logo {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-logo {
+ transform: scale(1.05);
+}
+
 .work-card {
  background: var(--bg-card);
  border: 1px solid var(--border);
@@ -1040,6 +1057,7 @@ body:hover .cursor-outline { opacity: 0.4; }
  .about-photo { order: -1; }
  .photo-frame { width: 260px; height: 320px; }
  .works-grid { grid-template-columns: repeat(2, 1fr); }
+ .works-single { grid-template-columns: 1fr; }
  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: 220px; }
 }
 
@@ -1061,6 +1079,7 @@ body:hover .cursor-outline { opacity: 0.4; }
  .photo-frame { width: 220px; height: 280px; }
  .works { padding: 60px 0; }
  .works-grid { grid-template-columns: 1fr; }
+ .works-single { grid-template-columns: 1fr; }
  .gallery { padding: 60px 0; }
  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(2, 220px); }
  .skills { padding: 60px 0; }
