@@ -1,12 +1,12 @@
---2026-08-09 05:44:24--  https://cdn.discordapp.com/attachments/1529699607117037658/1535874267978272908/61b25f2b-fb3f-4add-966e-dd547fb8c832.jpg?ex=6a7959e0&is=6a780860&hm=5d653d1176b5e5ae9129c64bc73a494695ccaf24f1d5f025a7267f760de0af3a&
-Resolving cdn.discordapp.com (cdn.discordapp.com)... 162.159.135.233, 162.159.129.233, 162.159.130.233, ...
-Connecting to cdn.discordapp.com (cdn.discordapp.com)|162.159.135.233|:443... connected.
+--2026-08-09 05:56:02--  https://cdn.discordapp.com/attachments/1529699607117037658/1535874267978272908/61b25f2b-fb3f-4add-966e-dd547fb8c832.jpg?ex=6a7959e0&is=6a780860&hm=5d653d1176b5e5ae9129c64bc73a494695ccaf24f1d5f025a7267f760de0af3a&
+Resolving cdn.discordapp.com (cdn.discordapp.com)... 162.159.129.233, 162.159.133.233, 162.159.130.233, ...
+Connecting to cdn.discordapp.com (cdn.discordapp.com)|162.159.129.233|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 67981 (66K) [image/jpeg]
 Saving to: '61b25f2b-fb3f-4add-966e-dd547fb8c832.jpg?ex=6a7959e0&is=6a780860&hm=5d653d1176b5e5ae9129c64bc73a494695ccaf24f1d5f025a7267f760de0af3a&'
 
-     0K .......... .......... .......... .......... .......... 75% 3.79M 0s
-    50K .......... ......                                     100% 3.76M=0.02s
+     0K .......... .......... .......... .......... .......... 75% 1.61M 0s
+    50K .......... ......                                     100% 6.47M=0.03s
 
-2026-08-09 05:44:24 (3.79 MB/s) - '61b25f2b-fb3f-4add-966e-dd547fb8c832.jpg?ex=6a7959e0&is=6a780860&hm=5d653d1176b5e5ae9129c64bc73a494695ccaf24f1d5f025a7267f760de0af3a&' saved [67981/67981]
+2026-08-09 05:56:02 (1.98 MB/s) - '61b25f2b-fb3f-4add-966e-dd547fb8c832.jpg?ex=6a7959e0&is=6a780860&hm=5d653d1176b5e5ae9129c64bc73a494695ccaf24f1d5f025a7267f760de0af3a&' saved [67981/67981]
 
