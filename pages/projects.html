@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Rann</title>
+  <meta name="description" content="Bots and automation systems designed by Rann for Society and beyond.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="page-loader">
+    <div class="loader-text">&lt;<span>rann</span> /&gt;</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <div class="cursor-glow"></div>
+  <div class="animated-bg"></div>
+  <div class="grid-overlay"></div>
+  <div class="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--gradient-primary);z-index:10001;width:0%;"></div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">&lt;<span>rann</span> /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta" data-magnetic>Let's Talk</a>
+      <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section style="padding: 10rem 2rem 4rem; text-align: center;">
+    <div class="section-header reveal">
+      <div class="section-label">// Portfolio</div>
+      <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">Bots I've <span class="gradient-text">Designed</span></h1>
+      <p class="section-desc">
+        Every bot here solves a real problem I experienced while operating communities.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;" class="reveal">
+      <button class="skill-tag" style="cursor: pointer; background: var(--gradient-primary); color: var(--bg-primary); border: none; font-weight: 600;">All</button>
+      <button class="skill-tag" style="cursor: pointer;">Discord Bots</button>
+      <button class="skill-tag" style="cursor: pointer;">Telegram Bots</button>
+      <button class="skill-tag" style="cursor: pointer;">Moderation</button>
+      <button class="skill-tag" style="cursor: pointer;">Utility</button>
+    </div>
+
+    <div class="grid-2" data-stagger>
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">🛡️</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Discord Bot</span>
+            <span class="project-tag">Moderation</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+          <h3 class="project-title">Sentry Moderator</h3>
+          <p class="project-desc">
+            Auto-moderation bot for Society Discord. Detects spam, filters toxic keywords, 
+            auto-warns repeat offenders, and escalates serious issues to human mods. 
+            Reduced manual moderation workload by 80%.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">👋</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Discord Bot</span>
+            <span class="project-tag">Onboarding</span>
+            <span class="project-tag">Discord.js</span>
+          </div>
+          <h3 class="project-title">Welcome Flow Bot</h3>
+          <p class="project-desc">
+            Automated onboarding system for new Society members. Sends personalized welcome DMs, 
+            guides through verification, assigns roles based on interests, and introduces 
+            relevant channels. Zero manual onboarding needed.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">📢</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Telegram Bot</span>
+            <span class="project-tag">Broadcast</span>
+            <span class="project-tag">Python</span>
+          </div>
+          <h3 class="project-title">Society Broadcast</h3>
+          <p class="project-desc">
+            Cross-platform announcement bot connecting Discord and Telegram. 
+            Syncs important updates, handles scheduled posts, manages pinned messages, 
+            and tracks engagement metrics across both platforms.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">⚙️</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Discord Bot</span>
+            <span class="project-tag">Utility</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+          <h3 class="project-title">Society Utility Suite</h3>
+          <p class="project-desc">
+            All-in-one utility bot for Society — custom slash commands, role management, 
+            event creation with RSVP tracking, poll system, and member activity leaderboard. 
+            The Swiss Army knife of community tools.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">🎫</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Discord Bot</span>
+            <span class="project-tag">Support</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+          <h3 class="project-title">Support Ticket Bot</h3>
+          <p class="project-desc">
+            Ticket management system for community support. Members open tickets via reactions, 
+            bots auto-categorize by issue type, and route to the right moderator. 
+            Average response time dropped from 4 hours to 30 minutes.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="font-size: 4rem;">📊</div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Discord Bot</span>
+            <span class="project-tag">Analytics</span>
+            <span class="project-tag">Python</span>
+          </div>
+          <h3 class="project-title">Community Pulse</h3>
+          <p class="project-desc">
+            Analytics bot tracking community health metrics — active members, message velocity, 
+            engagement trends, and bot performance stats. Generates weekly reports 
+            so we know what's working and what needs fixing.
+          </p>
+          <div class="project-links">
+            <a href="https://society-community.vercel.app" target="_blank" class="project-link">Society →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-secondary); border-radius: 40px; margin: 0 1rem; max-width: calc(100% - 2rem); padding: 6rem 2rem;">
+    <div class="section-header reveal">
+      <div class="section-label">// Open Source</div>
+      <h2 class="section-title">Community <span class="gradient-text">Contributions</span></h2>
+      <p class="section-desc">
+        Bot templates and utilities I've shared for other community builders.
+      </p>
+    </div>
+
+    <div class="grid-3" data-stagger>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">discord-welcome-template</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">⭐ 89</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+          Plug-and-play Discord.js welcome bot template. Customizable messages, role assignment, 
+          and verification flow. Drop-in ready for any community.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">telegram-broadcast-utils</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">⭐ 56</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+          Utility functions for Telegram bot broadcast systems. Message queuing, 
+          rate limiting, and engagement tracking out of the box.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">mod-log-system</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">⭐ 112</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+          Lightweight moderation logging system for Discord bots. Tracks warns, kicks, bans 
+          with timestamps and reasons. Simple JSON storage, zero dependencies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">&lt;<span>rann</span> /&gt;</div>
+      <p class="footer-text">Bot designer at Society. Building automation that serves people.</p>
+      <div class="footer-social">
+        <a href="https://x.com/rann_dev" target="_blank" title="X / Twitter">𝕏</a>
+        <a href="https://t.me/rann_xyz" target="_blank" title="Telegram">✈</a>
+        <a href="#" onclick="alert('Discord: rann_xyz'); return false;" title="Discord">💬</a>
+      </div>
+      <p class="footer-copy">© 2026 Rann. Built with code and caffeine.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
