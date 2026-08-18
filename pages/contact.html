@@ -46,22 +46,22 @@
   <section class="section" style="padding-top: 0;">
     <div class="grid-2" style="align-items: start; gap: 4rem;">
       <div class="reveal">
-        <form id="contact-form" style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
+        <form id="contact-form" action="https://formspree.io/f/xnqevwdr" method="POST" style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
           <h3 style="font-family: var(--font-pixel); font-size: 0.8rem; margin-bottom: 2rem;">Send a Message</h3>
 
           <div class="form-group">
             <label class="form-label">Name</label>
-            <input type="text" class="form-input" placeholder="Your name" required>
+            <input type="text" name="name" class="form-input" placeholder="Your name" required>
           </div>
 
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="you@example.com" required>
+            <input type="email" name="email" class="form-input" placeholder="you@example.com" required>
           </div>
 
           <div class="form-group">
             <label class="form-label">Project Type</label>
-            <select class="form-select" style="cursor: pointer;">
+            <select name="project_type" class="form-select" style="cursor: pointer;">
               <option value="">Select...</option>
               <option value="bot">Discord/Telegram Bot</option>
               <option value="community">Community Operations</option>
@@ -73,9 +73,10 @@
 
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
           </div>
 
+          <input type="hidden" name="_replyto" value="imrann170310@gmail.com">
           <button type="submit" class="hero-cta" style="width: 100%; justify-content: center;">
             Send Message →
           </button>
@@ -111,11 +112,11 @@
               </div>
             </a>
 
-            <a href="https://society-community.vercel.app" target="_blank" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
-              <div style="width: 45px; height: 45px; border-radius: 10px; background: var(--accent-red-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🏛️</div>
+            <a href="mailto:imrann170310@gmail.com" style="display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
+              <div style="width: 45px; height: 45px; border-radius: 10px; background: var(--accent-red-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">✉️</div>
               <div>
-                <div style="font-weight: 700;">Society</div>
-                <div class="mono" style="font-size: 0.8rem; color: var(--text-muted);">society-community.vercel.app</div>
+                <div style="font-weight: 700;">Email</div>
+                <div class="mono" style="font-size: 0.8rem; color: var(--text-muted);">imrann170310@gmail.com</div>
               </div>
             </a>
           </div>
