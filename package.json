@@ -10,13 +10,12 @@
   },
   "dependencies": {
     "next": "14.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@react-three/drei": "^9.98.0",
     "@react-three/fiber": "^8.15.6",
-    "@react-spring/three": "^9.8.0",
+    "@react-three/three": "^0.6.0",
     "@tabler/icons-react": "^3.41.0",
-    "@threejs/postprocessing": "^0.29.0",
     "three": "^0.162.0",
     "gsap": "^3.12.2",
     "lenis": "^6.0.14",
@@ -27,10 +26,11 @@
     "tailwind-merge": "^2.1.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.0",
-    "@types/node": "20.0.0",
-    "typescript": "5.2.0",
-    "eslint": "8.45.0",
-    "eslint-config-next": "14.2.0"
+    "@types/node": "^20.12.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.4.0",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^14.2.0"
   }
 }
