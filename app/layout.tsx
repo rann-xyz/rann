@@ -1,8 +1,6 @@
 /**
  * Root Layout for RANN Portfolio
  */
-"use client"
-
 import "./globals.css"
 
 export const metadata = {
@@ -18,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-black text-white min-h-screen">
+      <body className="bg-black text-white min-h-screen antialiased">
         {children}
       </body>
     </html>
