@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="RANN - Engineer | Builder | Moderator">
+ <title>RANN</title>
+ <style>
+ * {margin:0;padding:0;box-sizing:border-box}
+ body{background:#0a0a0a;color:#fff;font-family:monospace;min-height:100vh}
+ html{scroll-behavior:smooth}
+ #progress{position:fixed;top:0;left:0;height:4px;background:#ff1744;width:0%}
+ .section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem}
+ .label{color:#a3a3a3;font-size:.9rem;margin-bottom:1rem}
+ h1{font-size:clamp(3rem,8vw,8rem);font-weight:800;letter-spacing:.1em}
+ h2{color:#a3a3a3;font-size:clamp(1.5rem,3vw,2.5rem);margin:2rem 0}
+ .btn{display:inline-block;padding:1rem 2rem;border:2px solid #ff1744;color:#ff1744;border-radius:9999px;transition:all .3s}
+ .btn:hover{background:#ff1744;color:#0a0a0a}
+ @media(max-width:768px){h1{font-size:3rem};.section{padding:2rem}}
+ </style>
+</head>
+<body><div id="progress"></div>
+<section class="section" id="home"><span class="label">01 • HOME</span><h1>RANN</h1><h2>ENGINEER • BUILDER • MODERATOR</h2><a href="#about" class="btn">EXPLORE</a></section>
+<section class="section" id="about"><span class="label">02 • ABOUT</span><h2>ABOUT ME</h2><p style="color:#a3a3a3;margin:2rem 0">I build software, AI systems, automation, web experiences, and online communities.</p></section>
+<section class="section" id="projects"><span class="label">03 • PROJECTS</span><h2>SELECTED WORK</h2><p style="color:#a3a3a3">RANN Agent • Society • AI Systems</p></section>
+<section class="section" id="society"><span class="label">04 • SOCIETY</span><h2>SOCIETY</h2><p style="color:#a3a3a3">Building communities around WEB3</p></section>
+<section class="section" id="contact"><span class="label">05 • CONTACT</span><h2>LET'S BUILD SOMETHING INTERESTING</h2><div style="display:flex;gap:2rem;margin-top:2rem"><a href="https://github.com/rann-xyz" style="color:#ff1744">GITHUB</a><a href="https://x.com/rann_xyz" style="color:#a3a3a3">X</a></div></section>
+<script>window.addEventListener('scroll',()=>{document.getElementById('progress').style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%'});document.querySelectorAll('a[href]^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})})})</script>
+</body></html>
