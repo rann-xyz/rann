@@ -1,0 +1,50 @@
+# Dependencies
+node_modules
+.next
+out
+
+# Production
+build/
+dist/
+
+# Environment
+.env.local
+.env.development.local
+.env.production.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary
+tmp/
+temp/
+
+# Large files that shouldn't be committed
+*.db
+*.sqlite
+*.sqlite3
+
+# Hermes state files (large database files)
+.hermes/state.db*
+.hermes/state-snapshots/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Optional npm cache directory
+.npm
