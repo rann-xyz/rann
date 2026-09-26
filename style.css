@@ -1,0 +1,160 @@
+/* RANN Portfolio Styles */
+:root {
+ --primary: #ff1744;
+ --dark: #0a0a0a;
+ --light: #ffffff;
+ --gray: #a3a3a3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+ background: var(--dark);
+ color: var(--light);
+ font-family: 'Monaco', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+ min-height: 100vh;
+ line-height: 1.8;
+}
+
+html { scroll-behavior: smooth; }
+
+header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 100;
+}
+
+.nav-brand {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--primary);
+}
+
+.nav-links {
+ display: flex;
+ gap: 1.5rem;
+}
+
+.nav-links a {
+ color: var(--gray);
+ text-decoration: none;
+ font-size: 0.9rem;
+ transition: color 0.3s;
+}
+
+.nav-links a:hover {
+ color: var(--primary);
+}
+
+.hero {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding-top: 60px;
+}
+
+.hero-title {
+ font-size: clamp(4rem, 10vw, 10rem);
+ font-weight: 800;
+ letter-spacing: 0.1em;
+ margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+ font-size: clamp(1.5rem, 3vw, 2rem);
+ color: var(--gray);
+ margin-bottom: 2rem;
+}
+
+.hero-description {
+ font-size: 1.2rem;
+ color: var(--gray);
+ margin-bottom: 3rem;
+}
+
+.btn {
+ display: inline-block;
+ padding: 1rem 2rem;
+ border: 2px solid var(--primary);
+ color: var(--primary);
+ text-decoration: none;
+ border-radius: 9999px;
+ font-weight: 500;
+ transition: all 0.3s;
+}
+
+.btn:hover {
+ background: var(--primary);
+ color: var(--dark);
+}
+
+footer {
+ padding: 2rem;
+ text-align: center;
+}
+
+.footer-links {
+ display: flex;
+ gap: 2rem;
+ justify-content: center;
+ margin-top: 1rem;
+}
+
+.footer-links a {
+ color: var(--gray);
+ text-decoration: none;
+ transition: color 0.3s;
+}
+
+.footer-links a:hover {
+ color: var(--primary);
+}
+
+/* Scroll Progress */
+#scroll-progress {
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 4px;
+ background: var(--primary);
+ z-index: 1000;
+}
+
+/* Sections */
+section {
+ min-height: 100vh;
+ padding: 6rem 2rem 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+}
+
+.section-title {
+ font-size: clamp(2rem, 5vw, 4rem);
+ font-weight: 700;
+ margin-bottom: 2rem;
+}
+
+.section-content {
+ max-width: 600px;
+ color: var(--gray);
+ line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ .hero-title { font-size: 3rem; }
+ .hero-subtitle { font-size: 1.2rem; }
+ header { padding: 1rem; }
+ .nav-links { gap: 1rem; }
+}
