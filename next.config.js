@@ -2,12 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    scrollTrigger: true,
-  },
   images: {
     domains: ['rannxyz.vercel.app', 'api.github.com'],
   },
+  // Remove experimental.scrollTrigger as it's not valid
 }
 
 module.exports = nextConfig
